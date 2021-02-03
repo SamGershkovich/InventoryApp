@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/farmboyColorLight">
+
+    <TextView
+        android:id="@+id/employeeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:background="@color/farmboyColorLight"
+        android:padding="20sp"
+        android:scaleType="center"
+        android:text="Employee: \nSam Gershkovich"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <LinearLayout
+         android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/loadPriceListButton"
+                android:layout_width="200dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:onClick="OpenFilePicker"
+                android:text="Load Price List pdf" />
+
+            <Button
+                android:id="@+id/loadInventoryButton"
+                android:layout_width="200dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:onClick="OpenFilePicker"
+                android:text="Load Inventory pdf" />
+
+
+            <CheckBox
+                android:id="@+id/countBy"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:onClick="SetCountBy"
+                android:text="Count by 0.25" />
+            <CheckBox
+                android:id="@+id/roundTo"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="SetRoundTo"
+                android:text="Round to nearest" />
+
+            <Button
+                android:id="@+id/loadInvLogButton"
+                android:layout_width="200dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_purple"
+                android:onClick="LoadInvLog"
+                android:textColor="@android:color/white"
+                android:text="Load Inv Log" />
+
+            <Button
+                android:id="@+id/finalizeInvButton"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="79dp"
+                android:layout_marginTop="10dp"
+                android:text="FINALIZE INVENTORY"
+                android:onClick="FinalizeInventory"
+                android:backgroundTint="@android:color/holo_orange_light"/>
+
+            <Button
+                android:id="@+id/logOutButton"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="79dp"
+                android:layout_marginTop="10dp"
+                android:alpha="0.90"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:onClick="Logout"
+                android:padding="10dp"
+                android:text="Log out"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/editEmployeesButton"
+                android:layout_width="200dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:textColor="@android:color/white"
+                android:onClick="EditEmployees"
+                android:text="Edit Employees" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

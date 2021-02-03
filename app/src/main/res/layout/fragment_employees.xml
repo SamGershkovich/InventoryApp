@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@color/farmboyColorLight">
+
+    <TextView
+        android:id="@+id/employeeInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:background="@color/farmboyColorLight"
+        android:padding="20sp"
+        android:scaleType="center"
+        android:text="Employees:"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/employeeScroller">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:id="@+id/employeeTable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/holo_blue_light">
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addEmployeeButton"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:onClick="AddEmployee"
+            android:text="Add"/>
+        <Button
+            android:id="@+id/removeEmployeeButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="RemoveEmployee"
+            android:enabled="false"
+            android:text="remove" />
+    </LinearLayout>
+
+
+</LinearLayout>
